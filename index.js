@@ -10,17 +10,15 @@ const merge = require('lodash.merge')
  * @param {string} delim       símbolo usado para separar as chaves
  * @returns {object} Retorna um novo objeto aninhado
  */
-function _unflatten(value, flattenKey, delim = '.') {
+function _unflatten(value, flattenKey, delim) {
 	const keys = flattenKey.split(delim)
 	const size = keys.length - 1
 	const out = Object.create(null)
 	let remainder = keys
 	let next = out
 	for (let i = 0; i < size; i++) {
-		if (!next[keys[i]]) {
-			next[keys[i]] = Object.create(null)
-			next = next[keys[i]]
-		}
+		next[keys[i]] = Object.create(null)
+		next = next[keys[i]]
 		remainder = remainder.slice(1)
 	}
 	next[remainder.join('')] = value
