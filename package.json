@@ -1,0 +1,39 @@
+{
+  "name": "@tadashi/unflatten-object",
+  "version": "1.0.0",
+  "description": "Unflatten a flat object",
+  "main": "index.js",
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "report": "nyc report --reporter=text-lcov | coveralls",
+    "pretest": "xo",
+    "test": "ava"
+  },
+  "keywords": [
+    "flatten",
+    "object",
+    "level",
+    "deep"
+  ],
+  "author": "Thiago Lagden",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.9.1"
+  },
+  "dependencies": {
+    "lodash.merge": "4.6.1"
+  },
+  "devDependencies": {
+    "ava": "1.0.1",
+    "xo": "0.23.0"
+  },
+  "xo": {
+    "envs": [
+      "node"
+    ],
+    "semicolon": false
+  }
+}
