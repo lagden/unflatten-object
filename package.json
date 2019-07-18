@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/unflatten-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unflatten a flat object",
   "main": "index.js",
   "files": [
@@ -24,16 +24,19 @@
     "node": ">=8.9.1"
   },
   "dependencies": {
-    "lodash.merge": "4.6.1"
+    "lodash.merge": "4.6.2"
   },
   "devDependencies": {
-    "ava": "1.0.1",
-    "xo": "0.23.0"
+    "ava": "2.2.0",
+    "xo": "0.24.0"
   },
   "xo": {
     "envs": [
       "node"
     ],
-    "semicolon": false
+    "semicolon": false,
+    "rules": {
+      "padding-line-between-statements": 0
+    }
   }
 }
