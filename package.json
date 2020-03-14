@@ -27,8 +27,8 @@
     "lodash.merge": "4.6.2"
   },
   "devDependencies": {
-    "ava": "2.2.0",
-    "xo": "0.24.0"
+    "ava": "3.5.0",
+    "xo": "0.28.0"
   },
   "xo": {
     "envs": [
@@ -36,7 +36,9 @@
     ],
     "semicolon": false,
     "rules": {
-      "padding-line-between-statements": 0
+      "padding-line-between-statements": 0,
+      "unicorn/prevent-abbreviations": 0,
+      "capitalized-comments": 0
     }
   }
 }

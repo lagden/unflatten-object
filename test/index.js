@@ -1,9 +1,8 @@
-/* eslint capitalized-comments:0 */
 /* eslint camelcase:0 */
 'use strict'
 
-import test from 'ava'
-import unflatten from '..'
+const test = require('ava')
+const unflatten = require('..')
 
 test('basic', t => {
 	const flat = {
