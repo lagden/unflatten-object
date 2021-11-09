@@ -1,6 +1,4 @@
-'use strict'
-
-const merge = require('lodash.merge')
+import merge from 'lodash.merge'
 
 /**
  * Helper para desachatar uma chave
@@ -40,4 +38,4 @@ function unflattenObject(obj, delim = '.') {
 	return nobj
 }
 
-module.exports = unflattenObject
+export default unflattenObject
