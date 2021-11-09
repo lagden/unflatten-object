@@ -29,7 +29,7 @@ $ npm i -S @tadashi/unflatten-object
 ## Usage
 
 ```js
-const unflatten = require('@tadashi/unflatten-object')
+import unflatten from '@tadashi/unflatten-object'
 
 const unflat = unflatten({
   'a.b.c': 'foo',
