@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/unflatten-object",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Unflatten a flat object",
   "type": "module",
   "main": "src/unflatten.js",
