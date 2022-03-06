@@ -1,9 +1,22 @@
 {
   "name": "@tadashi/unflatten-object",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Unflatten a flat object",
   "type": "module",
-  "main": "src/unflatten.js",
+  "main": "./src/unflatten.js",
+  "browser": "./src/unflatten.js",
+  "exports": {
+    ".": {
+      "browser": "./src/unflatten.js",
+      "import": "./src/unflatten.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "imports": {
+    "#merge": {
+      "node": "lodash.merge"
+    }
+  },
   "files": [
     "src",
     "LICENSE",
@@ -11,6 +24,7 @@
   ],
   "scripts": {
     "pretest": "xo",
+    "_test": "NODE_OPTIONS='--experimental-loader ./test/helper/loader.mjs' c8 --reporter=text --reporter=lcov ava",
     "test": "c8 --reporter=text --reporter=lcov ava"
   },
   "keywords": [
@@ -28,10 +42,10 @@
     "lodash.merge": "4.6.2"
   },
   "devDependencies": {
-    "ava": "3.15.0",
-    "c8": "7.10.0",
+    "ava": "4.1.0",
+    "c8": "7.11.0",
     "timekeeper": "2.2.0",
-    "xo": "0.46.4"
+    "xo": "0.48.0"
   },
   "xo": {
     "envs": [

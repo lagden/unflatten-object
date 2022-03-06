@@ -35,6 +35,16 @@ test('array', t => {
 	t.is(JSON.stringify(unflat), '{"a":{"b":{"c":["x","y",{"z":"foo"}]},"d":"bar"}}')
 })
 
+test('form', t => {
+	const flat = {
+		'car.1.tipo': 1,
+		'car.2.tipo': 2,
+		'car.2.name': 'mega car',
+	}
+	const unflat = unflatten(flat)
+	t.snapshot(unflat)
+})
+
 test('date', t => {
 	const flat = {
 		a__b__c: ['x', 'y', {z: new Date(1_518_375_593_748)}],
